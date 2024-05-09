@@ -1,77 +1,15 @@
-/*
-const primerTopping = document.querySelector('.topping');
+const toppings = document.getElementsByClassName('topping');
 
-console.log(primerTopping.style);
-* Cambiando el estilo con javascript
-primerTopping.style.backgroundColor = 'blue';
-primerTopping.style.color = '#6dff00';
-primerTopping.style.textTransform = 'uppercase';
+/*
+function mostrarClic (e) {
+    console.log(e.target.innerText, 'click on it');
+}
 */
 
-// const listaDeToppings = document.getElementById('lista-toppings')
-// innerText - textContent -> retorna texto
-// innerHTML -> retorna los elementos HTML
-
-/*
-* Modificar contenido de elemento
-const titulo = document.getElementById('titulo');
-titulo.innerText = 'Mis Toppings Favoritos';
-*/
-
-const enlaces = document.getElementsByTagName('a')
-// console.log(enlaces[0].getAttribute('href')) // * removeAttribute
-// console.log(enlaces[0].getAttribute('href', 'Modificar el atributo'))
-
-/*
-* AGREGAR/MODIFICAR CLASES
-const primerTopping = document.querySelector('.topping');
-primerTopping.classList.add('texto-verde');
-console.log(primerTopping.classList);
-
-*/
-/*
-* Verificar si clase existe
-const primerTopping = document.querySelector('.topping');
-
-console.log(primerTopping.classList.contains('fondo-marron'));
-
- */
-
-/*
-* Eliminar una clase
-const primerTopping = document.querySelector('.topping');
-primerTopping.classList.remove('topping');
-console.log(primerTopping.classList);
-
-*/
-
-/*
-* Agregar y modificar un elemento
-const listaDeToppings = document.getElementById('lista-toppings');
-
-const toppingNuevo = document.createElement('li');
-
-toppingNuevo.classList.add('topping', 'fondo-marron');
-toppingNuevo.innerText = 'Queso Extra';
-
-listaDeToppings.append(toppingNuevo);
-listaDeToppings.append('Hola, Mundo!')
-
-listaDeToppings.appendChild(toppingNuevo);
-toppingNuevo.remove()
-
-*/
-
-/*
-* Recorrer El DOM
-const listaDeToppings = document.getElementById('lista-toppings');
-
-console.log(listaDeToppings.parentElement);
-console.log(listaDeToppings.children);
-console.log(listaDeToppings.firstChild);
-console.log(listaDeToppings.lastChild);
-console.log(listaDeToppings.firstElementChild); // * es mejor este para obtener elementos
-console.log(listaDeToppings.previousElementSibling);
-*/
-
-
+for (const topping of toppings){
+    //console.log(topping)
+    //topping.addEventListener('click', mostrarClic);
+    topping.addEventListener('click', (e) => {
+        console.log(e.target.innerText, 'click on it');
+    });
+}
