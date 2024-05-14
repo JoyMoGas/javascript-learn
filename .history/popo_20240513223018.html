@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio</title>
+    <script>
+        function calcularPromedio() {
+            // Obtener los valores de los tres parciales
+            var parcial1 = parseFloat(document.getElementById('parcial1').value) || 0;
+            var parcial2 = parseFloat(document.getElementById('parcial2').value) || 0;
+            var parcial3 = parseFloat(document.getElementById('parcial3').value) || 0;
+
+            // Calcular el promedio
+            var promedio = (parcial1 + parcial2 + parcial3) / 3;
+
+            // Mostrar el resultado en el input de resultado
+            document.getElementById('resultado').value = promedio.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Promedio de Estudiante</h1>
+    <form onsubmit="event.preventDefault(); calcularPromedio();">
+        <label for="parcial1">Parcial 1:</label>
+        <input type="text" id="parcial1"><br><br>
+        <label for="parcial2">Parcial 2:</label>
+        <input type="text" id="parcial2"><br><br>
+        <label for="parcial3">Parcial 3:</label>
+        <input type="text" id="parcial3"><br><br>
+        <button type="submit">Calcular</button><br><br>
+        <label for="resultado">Promedio:</label>
+        <input type="text" id="resultado" readonly><br><br>
+    </form>
+</body>
+</html>

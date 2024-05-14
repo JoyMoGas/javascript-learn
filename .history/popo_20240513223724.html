@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio</title>
+    <script src="popo.js"></script>
+</head>
+<body>
+    <h1>Calcular Promedio</h1>
+    <form>
+        <label>Parcial 1:</label>
+        <input type="text" id="parcial1">
+        <br><br>
+        <label>Parcial 2:</label>
+        <input type="text" id="parcial2">
+        <br><br>
+        <label>Parcial 3:</label>
+        <input type="text" id="parcial3">
+        <br><br>
+        <input type="radio" id="puntoextra" name="extra" value="puntoextra">
+        <label>Punto Extra</label>
+        <br><br>
+        <input type="radio" id="sinpunto" name="extra" value="sinpunto" checked>
+        <label>Sin Punto Extra</label>
+        <br><br>
+        <button type="button" onclick="calcularPromedio()">Calcular</button>
+        <br><br>
+        <label>Promedio:</label>
+        <input type="text" id="resultado" readonly>
+        <br><br>
+    </form>
+</body>
+</html>
