@@ -51,15 +51,9 @@ botonInicioPausa.addEventListener('click', function() {
 botonReiniciar.addEventListener('click', function() {
   window.clearInterval(intervaloDeTiempo);
 
-  horas = 0;
-  minutos = 0;
   segundos = 0;
+  minutos = 0;
+  horas = 0;
 
-  // Reiniciar
   cronometro.innerText = '00:00:00';
-
-  // Actualizar Botones
-  botonInicioPausa.innerHTML = '<i class="bi bi-play-fill"></i>';
-  botonInicioPausa.classList.remove('pausar');
-  botonInicioPausa.classList.add('iniciar');
 })
